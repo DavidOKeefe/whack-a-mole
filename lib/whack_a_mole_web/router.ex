@@ -17,7 +17,7 @@ defmodule WhackAMoleWeb.Router do
   scope "/", WhackAMoleWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    live "/", GameLive
   end
 
   # Other scopes may use custom stacks.

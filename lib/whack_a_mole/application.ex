@@ -9,7 +9,6 @@ defmodule WhackAMole.Application do
   def start(_type, _args) do
     children = [
       WhackAMoleWeb.Telemetry,
-      WhackAMole.Repo,
       {DNSCluster, query: Application.get_env(:whack_a_mole, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: WhackAMole.PubSub},
       # Start a worker by calling: WhackAMole.Worker.start_link(arg)
